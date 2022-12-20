@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "63a1e7f47ea694074e0519d3"
+  },
+  "title": "Some body",
+  "body": "shrek 3 does not exist",
+  "author": "JackFilms"
+},{
+  "_id": {
+    "$oid": "63a1e7f47ea694074e0519d4"
+  },
+  "title": "Now im in 3DS",
+  "body": "im in the third year of school",
+  "author": "Bessi"
+},{
+  "_id": {
+    "$oid": "63a1e7f47ea694074e0519d5"
+  },
+  "title": "IcamBucam",
+  "body": "UgaBuga",
+  "author": "Bessi"
+}]

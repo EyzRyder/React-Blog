@@ -51,6 +51,19 @@ app.get('/blogs', (req, res) => {
         })
 })
 
+app.post('/blogs', (req, res) => {
+    const { title, body, author } = req.body;
+
+    db.collection.insert(
+        {
+            title: title,
+            body: body,
+            author: author
+        }
+    )
+})
+
+
 app.get('/blogs/:id', (req, res) => {
 
     if (ObjectId.isValid(req.params.id)) {
