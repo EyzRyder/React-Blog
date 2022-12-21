@@ -1,9 +1,20 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import useGet from "../hooks/useGet";
+import Axios from 'axios';
 
 const BlogDetails = () => {
     const { id } = useParams();
     const { data: blog, isPending, error } = useGet(`http://localhost:3000/blogs/${id}`)
+
+    const navigate = useNavigate();
+
+
+    const handleClickDelete = () => {
+        Axios.delete(`http://localhost:3000/blogs/${blog._id}`)
+            .then((response) => {
+                navigate("/");
+        });
+    }
 
     return (
         <div>
@@ -14,7 +25,7 @@ const BlogDetails = () => {
                     <h2 className="text-xl text-[#f1356d] mb-2">{blog.title}</h2>
                     <p className="float-right">Written by {blog.author}</p>
                     <div>{blog.body}</div>
-
+                    <button className="bg-[#f1356d] text-[#fff] border-none border-0 p-2 rounded-lg cursor-pointer" onClick={handleClickDelete}>Delete</button>
                 </article>
             )}
         </div>
