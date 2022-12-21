@@ -7,8 +7,8 @@ export default function BlogList({ blogs, title }) {
             {blogs.map((blog) => (
                 <div className="py-3 px-4 my-5 mx-0 border border-solid border-[#fafafa] hover:shadow-md" key={blog._id}>
                     <Link to={`/blogs/${blog._id}`}>
-                    <h2 className="text-xl text-[#f1356d] mb-2">{blog.title}</h2>
-                    <p>{blog.body}</p>
+                        <h2 className="text-xl text-[#f1356d] mb-2">{blog.title}</h2>
+                        <p>{blog.body}</p>
                         <p className="float-right">Written by {blog.author}</p>
                     </Link>
                 </div>
