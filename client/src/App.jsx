@@ -11,7 +11,7 @@ function App() {
     <Router>
     <div className="w-screen h-screen">
       <Navbar />
-      <div className="m-[40px] p-[20px]">
+      <div className="max-w-2xl m-[40px] p-[20px]">
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/create' element={<CreateBlog />} />

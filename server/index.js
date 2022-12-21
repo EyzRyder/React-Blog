@@ -54,13 +54,19 @@ app.get('/blogs', (req, res) => {
 app.post('/blogs', (req, res) => {
     const { title, body, author } = req.body;
 
-    db.collection.insert(
+    db.collection('blogs')
+        .insertOne(
         {
             title: title,
             body: body,
             author: author
         }
-    )
+    ).then(doc => {
+        res.status(200).json(doc)
+    })
+        .catch(err => {
+        res.status(500).json({ error: 'could not create new doc' })
+    });
 })
 
 
