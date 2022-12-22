@@ -26,7 +26,7 @@ export default function CreateBlog() {
     };
 
     return (
-        <div className="max-w-md m-0 text-center items-center justify-center">
+        <div className="m-0 text-center items-center justify-center">
             <h2 className="text-xl text-[#f1356d] mb-8">Add new blog</h2>
             <form onSubmit={handleSubmit}>
                 <label className="text-left block">Blog Title:</label>
