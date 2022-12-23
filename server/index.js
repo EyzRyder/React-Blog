@@ -4,6 +4,8 @@ const app = express();
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes');
+const careerRoutes = require('./routes/careerRoutes');
+
 const PORT = 3000;
 
 app.use(cors());
@@ -29,7 +31,8 @@ app.get('/', (req, res) => {
     res.send('hello world');
 })
 
-app.use('/blogs', blogRoutes )
+app.use('/blogs', blogRoutes)
+app.use('/careers', careerRoutes)
 
 // app.post('/blogs', (req, res) => {
 //     const { title, body, author } = req.body;
