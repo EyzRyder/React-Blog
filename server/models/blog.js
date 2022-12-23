@@ -6,14 +6,14 @@ const blogSchema = new Schema({
         type: 'string',
         require: true
     },
-    snippet: {
-        type: 'string',
-        require: true
-    },
     body: {
         type: 'string',
         require: true
-    }
+    },
+    author: {
+        type: 'string',
+        require: true
+    },
 }, { timestamps: true });
 
 const Blog = mongoose.model('Blog', blogSchema);
