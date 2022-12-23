@@ -22,10 +22,10 @@ const BlogDetails = () => {
             {isPending && <div>Loading ...</div>}
             {blog && (
                 <article>
-                    <h2 className="text-xl text-[#f1356d] mb-2">{blog.title}</h2>
+                    <h2 className="text-xl text-primary-100 mb-2">{blog.title}</h2>
                     <p className="float-right">Written by {blog.author}</p>
                     <div>{blog.body}</div>
-                    <button className="bg-[#f1356d] text-[#fff] border-none border-0 p-2 rounded-lg cursor-pointer" onClick={handleClickDelete}>Delete</button>
+                    <button className="bg-primary-100 text-[#fff] border-none border-0 p-2 rounded-lg cursor-pointer" onClick={handleClickDelete}>Delete</button>
                 </article>
             )}
         </div>
