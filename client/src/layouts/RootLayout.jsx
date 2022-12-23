@@ -8,13 +8,14 @@ export default function RootLayout() {
                 <h1 className="text-primary-100 text-3xl font-bold">Blog 3</h1>
                 <div className="ml-auto">
                     <NavLink to="/" className="NavLink">HOME</NavLink>
-                    <NavLink to="about" className="NavLink">ABOUT</NavLink>
-                    <NavLink to="create" className="NavLink">NEW BLOG</NavLink>
+                    <NavLink to="about" className="NavLink">SOBRE</NavLink>
+                    <NavLink to="help" className="NavLink">AJUDA</NavLink>
+                    <NavLink to="create" className="NavLink">NOVO BLOG</NavLink>
                 </div>
             </nav>
-            <div className="m-[40px] p-[20px]">
+            <main className="m-[40px] p-[20px]">
                 <Outlet />
-            </div>
+            </main>
         </div>
 
     );

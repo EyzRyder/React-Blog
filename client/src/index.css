@@ -19,3 +19,7 @@
 .active {
   @apply bg-primary-100 text-white
 }
+
+.faq .question {
+  @apply bg-[#00000033] py-2 px-5 rounded my-5 mx-0
+}
