@@ -9,7 +9,7 @@ import About from './pages/About';
 function App() {
   return (
     <Router>
-      <div className="w-screen h-screen bg-main-bl">
+      <div className="w-screen h-screen bg-white">
         <Navbar />
         <div className="m-[40px] p-[20px]">
           <Routes>

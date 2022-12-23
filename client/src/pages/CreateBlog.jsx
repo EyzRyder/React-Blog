@@ -27,7 +27,7 @@ export default function CreateBlog() {
 
     return (
         <div className="m-0 text-center items-center justify-center">
-            <h2 className="text-xl text-primary-100 mb-8">Add new blog</h2>
+            <h2 className="text-xl text-primary-100 mb-8 font-semibold">Add new blog</h2>
             <form onSubmit={handleSubmit}>
                 <label className="text-left block">Blog Title:</label>
                 <input
@@ -56,7 +56,7 @@ export default function CreateBlog() {
 
                 </select>
 
-                {!isPending && <button className="bg-primary-100 text-white border-none border-0 p-2 rounded-lg cursor-pointer">Add Blog</button>}
+                {!isPending && <button className="bg-primary-100 text-white border-none border-0 p-2 rounded-lg cursor-pointer hover:text-white hover:bg-primary-200">Add Blog</button>}
                 {isPending && <button disabled className="bg-primary-100 text-white border-none border-0 p-2 rounded-lg cursor-pointer">Adding Blog</button>}
 
             </form>
