@@ -9,7 +9,7 @@ export default function Careers() {
             {careers.map(career => (
                 <Link className="block bg-[#00000033] p-5 rounded my-5 mx-0" to={career._id} key={career._id}>
                     <p className="m-0 hover:text-primary-100">{career.title}</p>
-                    <p className="m-0 last:text-[0.8em] last:text-gray-500">Based in {career.location}</p>
+                    <p className="m-0 last:text-[0.8em] last:text-gray-500">Com sede em  {career.location}</p>
                 </Link>
             ))}
         </div>

@@ -7,12 +7,12 @@ export default function Home() {
 
     return (
         <div className="flex flex-col">
-            <h2 className="text-3xl text-primary-100 mb-8">Homepage</h2>
+            <h2 className="text-3xl text-primary-100 mb-8">Salve Galeira</h2>
             {/* {error && <div>{error}</div>} */}
             {/* {isPending && <div>Loading ...</div>} */}
             {blogs && <BlogList
                 blogs={blogs}
-                title="All Blogs!"
+                title="Todos os blogs"
             />}
         </div>
     );

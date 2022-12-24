@@ -17,7 +17,7 @@ export default function BlogDetails () {
             {blog && (
                 <article>
                     <h2 className="text-xl text-primary-100 mb-2">{blog.title}</h2>
-                    <p className="float-right">Written by {blog.author}</p>
+                    <p className="float-right">Escrito por {blog.author}</p>
                     <div>{blog.body}</div>
                     <button className="bg-primary-100 text-[#fff] border-none border-0 p-2 rounded-lg cursor-pointer" onClick={handleClickDelete}>Delete</button>
                 </article>

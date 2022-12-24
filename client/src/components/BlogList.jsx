@@ -10,7 +10,7 @@ export default function BlogList({ blogs, title }) {
                     <Link to={`/blogs/${blog._id}`}>
                         <h2 className="text-xl text-primary-100 mb-2">{blog.title}</h2>
                         <p>{blog.body}</p>
-                        <p className="float-right">Written by {blog.author}</p>
+                        <p className="float-right">Escrito por {blog.author}</p>
                     </Link>
                 </div>
             ))}

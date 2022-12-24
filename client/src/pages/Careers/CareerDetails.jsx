@@ -7,9 +7,9 @@ export default function CareerDetails() {
 
     return (
         <div className="bg-[#00000033] p-5 rounded my-5 mx-0">
-            <h2>Career Details for {career.title}</h2>
-            <p>Starting salary: {career.salary}</p>
-            <p>Location: {career.location}</p>
+            <h2>Detalhes do Cargo de {career.title}</h2>
+            <p>Salario Inicial: {career.salary}</p>
+            <p>Local: {career.location}</p>
             <div className="details">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed sunt ipsam quam assumenda quasi ipsa facilis laborum rerum voluptatem!</p>
             </div>
