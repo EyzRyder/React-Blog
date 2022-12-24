@@ -24,9 +24,9 @@ export const careersLoader = async () => {
             return response
         })
 
-    if (!res.statusText === 'OK') {
-        throw Error('Could not fetch the list of careers')
-    }
+    // if (!res.statusText === 'OK') {
+    //     throw Error('Could not fetch the list of careers')
+    // }
 
     return res.data
 }

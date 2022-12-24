@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from 'react-router-dom'
+import { useLoaderData, useParams} from 'react-router-dom'
 import Axios from 'axios';
 
 export default function CareerDetails() {
@@ -26,9 +26,9 @@ export const careerDetailsLoader = async ({ params }) => {
             return response
         })
 
-    if (!res.statusText === 'OK') {
-        throw Error('Could not find that career.')
-    }
+    // if (!res.statusText === 'OK') {
+    //     throw Error('Could not find that career.')
+    // }
 
     return res.data
 }
