@@ -18,7 +18,7 @@ const career_details = (req, res) => {
             res.json(result);
         })
         .catch((err) => {
-            res.status(404);
+            res.status(404).json(err);
             console.log(err);
         });
 }

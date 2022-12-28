@@ -19,13 +19,14 @@ import NotFound from './pages/NotFound';
 import RootLayout from './layouts/RootLayout'
 import HelpLayout from './layouts/helpLayout';
 import CareersLayout from './layouts/CareersLayout';
+import Error from './pages/Error';
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
 
     <Route path='/' element={<RootLayout />}>
-      <Route index element={<Home />} loader={blogLoader}/>
+      <Route index element={<Home />} loader={blogLoader} />
       
       <Route path='about' element={<About />} />
 
@@ -35,9 +36,10 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path='create' element={<CreateBlog />} />
-      <Route path='blogs/:id' element={<BlogDetails />} loader={blogDetailsLoader} />
 
-      <Route path='careers' element={<CareersLayout />}>
+      <Route path='blogs/:id' element={<BlogDetails />} loader={blogDetailsLoader} errorElement={<Error />} />
+
+      <Route path='careers' element={<CareersLayout />} errorElement={<Error />}  >
         <Route index element={<Careers />} loader={careersLoader} />
         <Route path=':id' element={<CareerDetails />} loader={careerDetailsLoader} />
       </Route>

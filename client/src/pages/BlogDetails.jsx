@@ -32,11 +32,10 @@ export const blogDetailsLoader = async ({ params }) => {
     const res = await Axios.get(`http://localhost:3000/blogs/${id}`)
         .then((response) => {
             return response
+        }).catch((err) => {
+            console.log(err);
+            throw Error('Could not find that career.')
         })
-
-    if (!res.statusText === 'OK') {
-        throw Error('Could not find that career.')
-    }
 
     return res.data
 }
