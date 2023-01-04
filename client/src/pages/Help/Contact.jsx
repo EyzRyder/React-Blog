@@ -17,8 +17,25 @@ export default function Contact() {
                 </label>
                 <button className="bg-primary-100 text-white NavLink">Enviar</button>
 
-                {/* {data && data.error && <p>{data.error}</p>} */}
+                {data && data.error && <p>{data.error}</p>}
             </Form>
         </div>
     );
+}
+
+export const contactAction = async ({ request }) => {
+    
+    const data = await request.formData();
+
+    const submission = {
+        email: data.get('email'),
+        message:data.get('message')
+    }
+
+    console.log(submission);
+    if (submission.message.length < 10) {
+        return {error: 'Mensagem esta pequeno, tem que ser pelo menos 10 caracteres'}
+    }
+
+    return redirect('/') 
 }
